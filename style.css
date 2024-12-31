@@ -1,5 +1,17 @@
-body{
+/* Configuração de layout para sticky footer */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Garante que o HTML e o body tenham 100% da altura da janela */
+}
 
+body {
+    display: flex;
+    flex-direction: column; /* Permite que o conteúdo seja organizado em coluna */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante entre o header e o footer */
 }
 
 header{
@@ -7,10 +19,6 @@ header{
 }
 
 .capa-header{
-
-}
-
-main{
 
 }
 
