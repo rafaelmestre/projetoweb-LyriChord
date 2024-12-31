@@ -2,6 +2,11 @@
     font-family: 'OpenSans';
     src: url('midias/OpenSans.ttf') format('opentype');
 }
+@font-face {
+    font-family: 'BerkshireSwash-Regular';
+    src: url('midias/Berkshire_Swash/BerkshireSwash-Regular.ttf') format('opentype');
+}
+
 
 /* Configuração de layout para sticky footer */
 body, html {
@@ -22,6 +27,18 @@ main {
     flex: 1; /* Faz o main ocupar o espaço restante entre o header e o footer */
 }
 
+h1{
+    font-family:'BerkshireSwash-Regular';
+    color: #F7F7F9;
+    font-size: 40px;
+    margin: 10px;
+    position: absolute; /* Ou 'fixed' se quiser que ela fique fixa na tela */
+    top: 0; /* Ajuste conforme necessário */
+    left: 0; /* Ajuste conforme necessário */
+    z-index: 10; /* Valor maior para garantir que fique acima do #capa-header */
+    width: 100%; /* Se necessário, para ajustar à largura */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); /* Sombra forte */}
+
 header{
     background-color: #30475E;
     width: 100%; /* Garante que a imagem ocupe 100% da largura da página */
@@ -39,11 +56,20 @@ header{
     box-sizing: border-box; /* Garante que padding e border não afetem as dimensões */
 }
 
-.settings{
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
+.settings {
+    margin: 10px;
+    position: absolute; /* Ou 'fixed' se quiser que ela fique fixa na tela */
+    top: 0; /* Ajuste conforme necessário */
+    left: 0; /* Ajuste conforme necessário */
+    z-index: 10; /* Valor maior para garantir que fique acima do #capa-header */
+    width: 100%; /* Se necessário, para ajustar à largura */
+}
 
+.settings nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    align-items: center;
 }
 
 /* Esconde o menu inicialmente */
@@ -54,23 +80,23 @@ header{
     margin: 0;
 }
 
-/* Exibe o menu quando a classe "show" é adicionada */
-#menu.show {
-    display: block;
-}
-
 /* Estilos do Botão de Configurações */
 .menu-toggle {
-    display: block;
-    color: #30475E;
+    color: #bac5d0;
     font-size: 24px;
     border: none;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    background: none;
 }
-  
+
+.btn-perfil img{
+    height: 30px;
+    width: auto;
+}
+
 /* Footer */
 footer {
   background-color: #30475E; /* Azul-Índigo */
