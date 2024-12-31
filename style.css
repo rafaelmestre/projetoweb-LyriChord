@@ -9,6 +9,8 @@ body, html {
     padding: 0;
     height: 100%; /* Garante que o HTML e o body tenham 100% da altura da janela */
     font-family: 'OpenSans';
+    background-color: #1c252e;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 body {
@@ -21,18 +23,45 @@ main {
 }
 
 header{
+    background-color: #30475E;
+    width: 100%; /* Garante que a imagem ocupe 100% da largura da página */
+    height: 80px; /* Define a altura da faixa */
+}
+
+/* Estilo para o cabeçalho com a imagem em faixa */
+#capa-header {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura da página */
+    height: 80px; /* Define a altura da faixa */
+    background-image: url('midias/capa-header.jpg'); /* Substitua pelo caminho correto */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    box-sizing: border-box; /* Garante que padding e border não afetem as dimensões */
+}
+
+.settings{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
 
 }
 
-.capa-header{
-
+/* Esconde o menu inicialmente */
+#menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+/* Exibe o menu quando a classe "show" é adicionada */
+#menu.show {
+    display: block;
+}
 
 /* Estilos do Botão de Configurações */
 .menu-toggle {
     display: block;
-    background-color: #FFD23F; /* Amarelo Solar */
     color: #30475E;
     font-size: 24px;
     border: none;
@@ -42,10 +71,6 @@ header{
     transition: background-color 0.3s;
 }
   
-.menu-toggle:hover {
-    background-color: #FF6F61; /* Coral Suave */
-}
-
 /* Footer */
 footer {
   background-color: #30475E; /* Azul-Índigo */
