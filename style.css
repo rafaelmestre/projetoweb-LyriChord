@@ -1,8 +1,14 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('midias/OpenSans.ttf') format('opentype');
+}
+
 /* Configuração de layout para sticky footer */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%; /* Garante que o HTML e o body tenham 100% da altura da janela */
+    font-family: 'OpenSans';
 }
 
 body {
@@ -21,6 +27,7 @@ header{
 .capa-header{
 
 }
+
 
 /* Estilos do Botão de Configurações */
 .menu-toggle {
