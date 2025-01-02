@@ -4,43 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="midias/logo-lc.png">
     <title>LyriChord - Editor de Cifras</title>
 </head>
 <body>
     <header>
-        <div id="capa-header" class="capa-header"></div>
-        <div class="settings">
-            <nav>
-                <a class="btn-perfil">
-                    <img class="icon-perfil" src="midias/icon-perfil.png" alt="icon perfil" width="auto" height="auto">
-                </a>
-                <button class="menu-toggle" onclick="toggleMenu()" aria-label="Configurações">•••</button>
-                <ul id="menu">
-                    <li><a href="#home">Novo</a></li>
-                    <li><a href="#about">Editar</a></li>
-                    <li><a href="#services">Configurações</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
+        <div id="capa-header" class="capa-header">
+            <nav class="settings">
+                <div class="lado-e">
+                    <a class="btn-perfil">
+                        <img class="icon-perfil" src="midias/icon-perfil.png" alt="icon perfil" width="auto" height="auto">
+                    </a>
+                    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Configurações">•••</button>
+                    <ul id="menu">
+                        <li><a href="#home">Novo</a></li>
+                        <li><a href="#about">Editar</a></li>
+                        <li><a href="#services">Configurações</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="lado-d">
+                    <h1>LyriChord</h1>
+                </div>
             </nav>
-            <h1>LyriChord</h1>
         </div>
     </header>
 
-    <aside>
-        <!--botão cifra/letra-->
-        <nav>
-
-        </nav>
-        <!-- lista de musicas escritas-->
-        <div>
-
-        </div>
-    </aside>
-
-    <!--painel de view da musica selecionada-->
-    <main>
-
-    </main>
+    <div class="app-container">
+        <!-- Botão para abrir/fechar a lista no mobile -->
+        <button class="toggle-list" onclick="toggleLista()">☰</button>
+    
+        <!-- Coluna Esquerda -->
+        <aside class="coluna-esquerda" id="colunaEsquerda">
+            <h2>Minhas Músicas</h2>
+            <ul class="lista-musicas">
+                <li><button onclick="mostrarMusica('musica1')">Título da Música 1</button></li>
+                <li><button onclick="mostrarMusica('musica2')">Título da Música 2</button></li>
+                <li><button onclick="mostrarMusica('musica3')">Título da Música 3</button></li>
+            </ul>
+        </aside>
+    
+        <!-- Coluna Direita -->
+        <main class="coluna-direita">
+            <h2 id="titulo-musica">Selecione uma música</h1>
+            <pre id="conteudo-musica">O conteúdo da música será exibido aqui.</pre>
+        </main>
+    </div>
 
     <!--rodapé-->
     <footer>
