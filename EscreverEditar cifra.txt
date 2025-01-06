@@ -1,0 +1,9 @@
+Escrever/Editar cifra
+Escrever/Editar letras
+Pesquisar no cifraclub
+Pesquisar no Letras
+Alterar o tom das cifras
+
+
+        <h1>LyriChord - Editor de Cifras</h1>
+        <p>Crie, salve ou incorpore cifras facilmente!</p>
